@@ -97,7 +97,7 @@ const Footer = () => {
       <div className="container-custom flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
         <p className="text-gray-500 text-sm">
           &copy; {currentYear} {COMPANY.name}. All rights reserved. 
-          <span className="block sm:inline sm:ml-2">Designed by: <span className="text-white font-medium">Yash Khandale</span></span>
+          <span className="block sm:inline sm:ml-2">| Designed by: Yash Khandale</span>
         </p>
         <div className="flex items-center gap-6 text-sm text-gray-500">
           <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>

@@ -179,6 +179,10 @@ export const TESTIMONIALS = [
   },
 ];
 
+import orthoPlusBottle from '@/assets/images/ortho-plus-bottle.png';
+import weightPlusBottle from '@/assets/images/weight-plus-bottle.png';
+import heyMomBottle from '@/assets/images/hey-mom-bottle.png';
+
 export const FEATURED_PRODUCTS = [
   {
     id: 1,
@@ -189,7 +193,7 @@ export const FEATURED_PRODUCTS = [
     benefits: ['Supports Bone Healing', 'Enhances Muscle Recovery', 'Supports Joint Health'],
     flavor: 'Vanilla',
     netWeight: '400g',
-    image: '/src/assets/images/ortho-plus-bottle.png',
+    image: orthoPlusBottle,
     featured: true,
   },
   {
@@ -206,7 +210,7 @@ export const FEATURED_PRODUCTS = [
     ],
     flavor: 'Caramel Chocolate',
     netWeight: '900g',
-    image: '/src/assets/images/weight-plus-bottle.png',
+    image: weightPlusBottle,
     featured: true,
   },
   {
@@ -223,7 +227,7 @@ export const FEATURED_PRODUCTS = [
     ],
     flavor: 'Vanilla',
     netWeight: '400g',
-    image: '/src/assets/images/hey-mom-bottle.png',
+    image: heyMomBottle,
     featured: true,
   },
 ];

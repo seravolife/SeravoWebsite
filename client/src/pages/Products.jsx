@@ -76,12 +76,12 @@ const Products = () => {
                 >
                   {/* Product Image */}
                   <div className="relative aspect-square bg-gradient-to-br from-gray-50 to-white overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center p-8">
+                    <div className="absolute inset-0 flex items-center justify-center p-0">
                       {product.image ? (
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="h-full w-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
+                          className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                           style={{ filter: 'brightness(1.02) contrast(1.05)' }}
                         />
                       ) : (

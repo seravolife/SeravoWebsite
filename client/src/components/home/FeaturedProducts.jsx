@@ -34,9 +34,9 @@ const FeaturedProducts = () => {
               >
                 {/* Image */}
                 <div className="relative aspect-[4/3] bg-white overflow-hidden border-b border-border-light">
-                  <div className="absolute inset-0 flex items-center justify-center p-4">
+                  <div className="absolute inset-0 flex items-center justify-center p-0">
                     {product.image ? (
-                      <img src={product.image} alt={product.name} className="h-full w-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                      <img src={product.image} alt={product.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     ) : (
                       <div className="w-20 h-20 rounded-2xl bg-light-bg flex items-center justify-center shadow-sm border border-border-light">
                         <span className="text-3xl text-medical">💊</span>

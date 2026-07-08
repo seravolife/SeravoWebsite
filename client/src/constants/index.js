@@ -183,6 +183,13 @@ import orthoPlusBottle from '@/assets/images/ortho-plus-bottle.png';
 import weightPlusBottle from '@/assets/images/weight-plus-bottle.png';
 import heyMomBottle from '@/assets/images/hey-mom-bottle.png';
 
+// New Product Images
+import heyMomTabletsImg from '@/assets/images/hey-mom-tablets.jpg';
+import slimProImg from '@/assets/images/slim-pro.jpg';
+import icuPlusImg from '@/assets/images/icu-plus.jpg';
+import glutathioneImg from '@/assets/images/glutathione-glow.jpg';
+import orthoPlusTabletsImg from '@/assets/images/ortho-plus-tablets.jpg';
+
 export const FEATURED_PRODUCTS = [
   {
     id: 1,
@@ -230,6 +237,66 @@ export const FEATURED_PRODUCTS = [
     image: heyMomBottle,
     featured: true,
   },
+  {
+    id: 4,
+    name: 'Seravo Hey Mom Tablets',
+    slug: 'seravo-hey-mom-tablets',
+    category: 'Maternal Health',
+    shortDescription: 'Essential Iron, Vitamins & Minerals for advanced maternal care.',
+    benefits: ['High Iron Absorption', 'Maternal Health Support'],
+    flavor: 'Unflavored',
+    netWeight: '30 Tablets',
+    image: heyMomTabletsImg,
+    featured: true,
+  },
+  {
+    id: 5,
+    name: 'Seravo Slim Pro',
+    slug: 'seravo-slim-pro',
+    category: 'Nutraceuticals',
+    shortDescription: 'Advanced Protein & Fiber Blend with Green Tea & Garcinia Extracts for weight loss.',
+    benefits: ['Promotes Healthy Weight Loss', 'Boosts Metabolism', 'Supports Lean Muscle Retention'],
+    flavor: 'Chocolate Mocha',
+    netWeight: '400g',
+    image: slimProImg,
+    featured: true,
+  },
+  {
+    id: 6,
+    name: 'Seravo ICU Plus',
+    slug: 'seravo-icu-plus',
+    category: 'Clinical Nutrition',
+    shortDescription: 'Whey Protein Isolate & Casein Complex for critical care recovery.',
+    benefits: ['Scientifically Formulated for ICU Recovery', 'Gentle on Digestion & Nutrient Absorption'],
+    flavor: 'Vanilla Recovery',
+    netWeight: '400g',
+    image: icuPlusImg,
+    featured: true,
+  },
+  {
+    id: 7,
+    name: 'Seravo Glutathione Glow Plus',
+    slug: 'seravo-glutathione-glow',
+    category: 'Dermatology',
+    shortDescription: 'Antioxidant Support for luminous skin.',
+    benefits: ['Luminous Skin', 'Antioxidant Support'],
+    flavor: 'Unflavored',
+    netWeight: '200g',
+    image: glutathioneImg,
+    featured: true,
+  },
+  {
+    id: 8,
+    name: 'Seravo Ortho Plus Tablets',
+    slug: 'seravo-ortho-plus-tablets',
+    category: 'Orthopedic Care',
+    shortDescription: 'Calcium + D3 for Joint Support.',
+    benefits: ['Joint Support', 'Bone Density'],
+    flavor: 'Unflavored',
+    netWeight: '10 x 15 Tablets',
+    image: orthoPlusTabletsImg,
+    featured: true,
+  }
 ];
 
 export const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';

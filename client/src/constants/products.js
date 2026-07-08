@@ -7,6 +7,13 @@ import proteinScoopImage from '@/assets/images/protein-scoop.png';
 import weightPlusBottle from '@/assets/images/weight-plus-bottle.png';
 import heyMomBottle from '@/assets/images/hey-mom-bottle.png';
 
+// New Product Images
+import heyMomTabletsImg from '@/assets/images/hey-mom-tablets.jpg';
+import slimProImg from '@/assets/images/slim-pro.jpg';
+import icuPlusImg from '@/assets/images/icu-plus.jpg';
+import glutathioneImg from '@/assets/images/glutathione-glow.jpg';
+import orthoPlusTabletsImg from '@/assets/images/ortho-plus-tablets.jpg';
+
 import {
   HiOutlineShieldCheck,
   HiOutlineLightningBolt,
@@ -218,4 +225,118 @@ export const PRODUCT_DETAILS = {
     gradientFrom: 'from-[#D4A0A0]',
     gradientTo: 'to-[#E8B4B4]',
   },
+
+  'seravo-hey-mom-tablets': {
+    name: 'Seravo Hey Mom Tablets',
+    tagline: 'Iron Supplement For Mothers',
+    description: 'Essential Iron, Vitamins & Minerals for advanced maternal care.',
+    category: 'Maternal Health',
+    flavor: 'Unflavored',
+    netWeight: '30 Tablets',
+    servingSize: '1 Tablet',
+    badge: 'New',
+    heroImage: heyMomTabletsImg,
+    carouselImages: [{ id: 0, src: heyMomTabletsImg, alt: 'Hey Mom Tablets' }],
+    composition: [
+      { emoji: '🩸', title: 'Iron', desc: 'Crucial for blood formation.' },
+      { emoji: '💊', title: 'Folic Acid', desc: 'Prevents neural tube defects.' }
+    ],
+    benefits: [],
+    features: ['High Iron Absorption', 'Maternal Health Support'],
+    whyTitle: 'Hey Mom Tablets',
+    whyDescription: 'Advanced Iron Supplement for mothers.',
+    gradientFrom: 'from-[#D4A0A0]',
+    gradientTo: 'to-[#E8B4B4]',
+  },
+
+  'seravo-slim-pro': {
+    name: 'Seravo Slim Pro',
+    tagline: 'Advanced Weight Management Formula',
+    description: 'Advanced Protein & Fiber Blend with Green Tea & Garcinia Extracts for weight loss.',
+    category: 'Nutraceuticals',
+    flavor: 'Chocolate Mocha',
+    netWeight: '400g',
+    servingSize: '1 Scoop',
+    badge: 'Trending',
+    heroImage: slimProImg,
+    carouselImages: [{ id: 0, src: slimProImg, alt: 'Slim Pro' }],
+    composition: [
+      { emoji: '🌿', title: 'Green Tea & Garcinia', desc: 'Boosts metabolism and energy.' },
+      { emoji: '💪', title: 'High Satiety Formula', desc: 'Helps control cravings.' }
+    ],
+    benefits: [],
+    features: ['Promotes Healthy Weight Loss', 'Boosts Metabolism', 'Supports Lean Muscle Retention'],
+    whyTitle: 'Slim Pro',
+    whyDescription: 'Your partner for effective and healthy weight management.',
+    gradientFrom: 'from-[#006064]',
+    gradientTo: 'to-[#0097A7]',
+  },
+
+  'seravo-icu-plus': {
+    name: 'Seravo ICU Plus',
+    tagline: 'Advanced ICU Recovery Formula',
+    description: 'Whey Protein Isolate & Casein Complex for critical care recovery.',
+    category: 'Clinical Nutrition',
+    flavor: 'Vanilla Recovery',
+    netWeight: '400g',
+    servingSize: '1 Scoop',
+    badge: 'Clinical',
+    heroImage: icuPlusImg,
+    carouselImages: [{ id: 0, src: icuPlusImg, alt: 'ICU Plus' }],
+    composition: [
+      { emoji: '🧬', title: 'Whey Isolate & Casein', desc: 'Aids muscle retention & immune support.' },
+      { emoji: '⚡', title: 'Folic Acid + B12', desc: 'Boosts cellular regeneration & energy.' }
+    ],
+    benefits: [],
+    features: ['Scientifically Formulated for ICU Recovery', 'Gentle on Digestion & Nutrient Absorption'],
+    whyTitle: 'ICU Plus',
+    whyDescription: 'Dedicated clinical nutrition for patients recovering in intensive care.',
+    gradientFrom: 'from-[#1A237E]',
+    gradientTo: 'to-[#3949AB]',
+  },
+
+  'seravo-glutathione-glow': {
+    name: 'Seravo Glutathione Glow Plus',
+    tagline: 'Advanced Formula for Luminous Skin',
+    description: 'Antioxidant Support for luminous skin.',
+    category: 'Dermatology',
+    flavor: 'Unflavored',
+    netWeight: '200g',
+    servingSize: '1 Scoop',
+    badge: 'Beauty',
+    heroImage: glutathioneImg,
+    carouselImages: [{ id: 0, src: glutathioneImg, alt: 'Glutathione Glow Plus' }],
+    composition: [
+      { emoji: '✨', title: 'Glutathione', desc: 'Master antioxidant for skin brightness.' }
+    ],
+    benefits: [],
+    features: ['Luminous Skin', 'Antioxidant Support'],
+    whyTitle: 'Glutathione Glow',
+    whyDescription: 'Unlock your natural radiance from within.',
+    gradientFrom: 'from-[#F8BBD0]',
+    gradientTo: 'to-[#F48FB1]',
+  },
+
+  'seravo-ortho-plus-tablets': {
+    name: 'Seravo Ortho Plus Tablets',
+    tagline: 'Calcium Citrate, Vitamin D3 & Minerals',
+    description: 'Calcium + D3 for Joint Support.',
+    category: 'Orthopedic Care',
+    flavor: 'Unflavored',
+    netWeight: '10 x 15 Tablets',
+    servingSize: '1 Tablet',
+    badge: 'Essential',
+    heroImage: orthoPlusTabletsImg,
+    carouselImages: [{ id: 0, src: orthoPlusTabletsImg, alt: 'Ortho Plus Tablets' }],
+    composition: [
+      { emoji: '🦴', title: 'Calcium Citrate', desc: 'High absorption calcium.' },
+      { emoji: '☀️', title: 'Vitamin D3', desc: 'Aids in calcium absorption.' }
+    ],
+    benefits: [],
+    features: ['Joint Support', 'Bone Density'],
+    whyTitle: 'Ortho Plus Tablets',
+    whyDescription: 'The perfect combination of Calcium and Vitamin D3.',
+    gradientFrom: 'from-[#E65100]',
+    gradientTo: 'to-[#EF6C00]',
+  }
 };

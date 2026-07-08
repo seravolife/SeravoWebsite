@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiArrowRight, HiPlay } from 'react-icons/hi';
+import { HiArrowRight, HiPlay, HiArrowLeft } from 'react-icons/hi';
 import { COMPANY, STATS } from '@/constants';
 import Button from '@/components/common/Button';
 import { fadeInUp, fadeInRight, staggerContainer, staggerItem } from '@/animations/variants';
@@ -10,15 +10,46 @@ import heyMomBottle from '@/assets/images/hey-mom-bottle.png';
 
 const heroImages = [orthoPlusBottle, weightPlusBottle, heyMomBottle];
 
+const slideVariants = {
+  enter: (direction) => ({
+    opacity: 0,
+    x: direction > 0 ? 100 : -100,
+  }),
+  center: {
+    opacity: 1,
+    x: 0,
+  },
+  exit: (direction) => ({
+    opacity: 0,
+    x: direction < 0 ? 100 : -100,
+  }),
+};
+
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const slideNext = () => {
+    setDirection(1);
+    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+  };
+
+  const slidePrev = () => {
+    setDirection(-1);
+    setCurrentImageIndex((prev) => (prev === 0 ? heroImages.length - 1 : prev - 1));
+  };
+
+  const goToSlide = (index) => {
+    setDirection(index > currentImageIndex ? 1 : -1);
+    setCurrentImageIndex(index);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+      slideNext();
     }, 15000);
     return () => clearInterval(interval);
-  }, []);
+  }, [currentImageIndex]);
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
@@ -103,20 +134,54 @@ const HeroSection = () => {
 
               {/* Product image */}
               <div className="relative z-10 w-[480px] h-[560px] flex items-center justify-center">
-                <AnimatePresence mode="wait">
+                <AnimatePresence custom={direction}>
                   <motion.img 
                     key={currentImageIndex}
                     src={heroImages[currentImageIndex]} 
                     alt="Seravo Featured Product" 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
+                    custom={direction}
+                    variants={slideVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
                     className="absolute max-w-[420px] h-[460px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)]"
                     style={{ mixBlendMode: 'multiply' }}
                   />
                 </AnimatePresence>
               </div>
+
+              {/* Carousel Indicators */}
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                {heroImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => goToSlide(idx)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${
+                      idx === currentImageIndex 
+                        ? 'bg-primary w-8' 
+                        : 'bg-primary/30 w-2.5 hover:bg-primary/50'
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Prev/Next Buttons */}
+              <button
+                onClick={slidePrev}
+                className="absolute -left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-card flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors z-20"
+                aria-label="Previous product"
+              >
+                <HiArrowLeft size={20} />
+              </button>
+              <button
+                onClick={slideNext}
+                className="absolute -right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-card flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors z-20"
+                aria-label="Next product"
+              >
+                <HiArrowRight size={20} />
+              </button>
 
               {/* Floating badge - Doctor Recommended */}
               <motion.div

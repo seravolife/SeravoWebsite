@@ -4,9 +4,9 @@ import { HiArrowRight, HiPlay, HiArrowLeft } from 'react-icons/hi';
 import { COMPANY, STATS } from '@/constants';
 import Button from '@/components/common/Button';
 import { fadeInUp, fadeInRight, staggerContainer, staggerItem } from '@/animations/variants';
-import orthoPlusBottle from '@/assets/images/ortho-plus-bottle.png';
-import weightPlusBottle from '@/assets/images/weight-plus-bottle.png';
-import heyMomBottle from '@/assets/images/hey-mom-bottle.png';
+import orthoPlusBottle from '@/assets/images/ortho-plus-bottle.webp';
+import weightPlusBottle from '@/assets/images/weight-plus-bottle.webp';
+import heyMomBottle from '@/assets/images/hey-mom-bottle.webp';
 
 const heroImages = [orthoPlusBottle, weightPlusBottle, heyMomBottle];
 

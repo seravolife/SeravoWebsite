@@ -4,9 +4,9 @@ import SEO from '@/components/common/SEO';
 import SectionHeader from '@/components/common/SectionHeader';
 import Button from '@/components/common/Button';
 import { staggerContainer, staggerItem, fadeInLeft, fadeInRight } from '@/animations/variants';
-import healthcareMeetingImage from '@/assets/images/healthcare_meeting.png';
-import clinicalDataImg from '@/assets/images/clinical_data.png';
-import medicalEduImg from '@/assets/images/medical_education.png';
+import healthcareMeetingImage from '@/assets/images/healthcare_meeting.webp';
+import clinicalDataImg from '@/assets/images/clinical_data.webp';
+import medicalEduImg from '@/assets/images/medical_education.webp';
 
 const resources = [
   {
@@ -26,7 +26,12 @@ const resources = [
 const Healthcare = () => {
   return (
     <div className="pt-24 pb-16 min-h-screen bg-light-bg">
-      <SEO title="Healthcare Professionals | Seravo" />
+      <SEO
+        title="Healthcare Professionals"
+        canonical="/healthcare-professionals"
+        description="Dedicated clinical resources, CME programs, and evidence-based prescribing tools for healthcare professionals. Join 10,000+ doctors who trust Seravo Life Sciences."
+        keywords="healthcare professionals India, clinical nutrition for doctors, CME pharma India, prescription nutraceuticals, evidence-based medicine, doctor trusted supplements"
+      />
       
       {/* Hero Section */}
       <section className="container-custom mb-20">
@@ -60,6 +65,7 @@ const Healthcare = () => {
               src={healthcareMeetingImage} 
               alt="Doctors Discussing Clinical Data" 
               className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/50 to-transparent lg:block hidden" />
             <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/20 to-transparent lg:hidden block" />
@@ -86,7 +92,7 @@ const Healthcare = () => {
           {resources.map((resource, idx) => (
             <motion.div key={idx} variants={staggerItem} className="bg-white rounded-[2rem] overflow-hidden border border-border-light shadow-sm hover:shadow-card-hover hover:border-primary/50 transition-all group flex flex-col">
               <div className="h-56 overflow-hidden relative">
-                <img src={resource.image} alt={resource.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={resource.image} alt={resource.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
                 <div className="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors" />
                 <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm text-primary rounded-xl flex items-center justify-center shadow-sm">
                   <resource.icon className="w-6 h-6" />

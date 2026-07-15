@@ -12,7 +12,7 @@ import {
 } from 'react-icons/hi';
 import { COMPANY, NAV_LINKS } from '@/constants';
 
-import logo from '@/assets/images/logo.png';
+import logo from '@/assets/images/logo.webp';
 
 const socialIcons = [
   { Icon: FaLinkedinIn, href: COMPANY.socialLinks.linkedin, label: 'LinkedIn' },

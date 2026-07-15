@@ -6,7 +6,7 @@ import SEO from '@/components/common/SEO';
 import SectionHeader from '@/components/common/SectionHeader';
 import Button from '@/components/common/Button';
 import { fadeInLeft, fadeInRight } from '@/animations/variants';
-import facilityImage from '@/assets/images/facility.png';
+import facilityImage from '@/assets/images/facility.webp';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +61,12 @@ const Contact = () => {
 
   return (
     <div className="pt-24 pb-16 min-h-screen bg-light-bg">
-      <SEO title="Contact Us | Seravo" />
+      <SEO
+        title="Contact Us"
+        canonical="/contact"
+        description="Get in touch with Seravo Life Sciences. Contact us for product inquiries, distribution partnerships, or medical affairs at our Pune headquarters."
+        keywords="contact Seravo Life Sciences, pharmaceutical distributor India, medical product inquiry, Pune pharma company contact"
+      />
       
       <div className="container-custom">
         <SectionHeader
@@ -82,7 +87,7 @@ const Contact = () => {
           >
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
-              <img src={facilityImage} alt="Facility" className="w-full h-full object-cover opacity-20 mix-blend-luminosity" />
+              <img src={facilityImage} alt="Facility" className="w-full h-full object-cover opacity-20 mix-blend-luminosity" loading="lazy" />
               <div className="absolute inset-0 bg-navy/80" />
             </div>
 

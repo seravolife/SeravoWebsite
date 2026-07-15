@@ -25,12 +25,12 @@ const categoryIcons = {
   ),
 };
 
-import orthopedicCare from '@/assets/images/orthopedic_care.png';
-import manufacturingPills from '@/assets/images/manufacturing_pills.png';
-import clinicalIv from '@/assets/images/clinical_nutrition_iv.png';
-import gastroCare from '@/assets/images/gastro_care_new.png';
-import cardiacCare from '@/assets/images/cardiac_care_new.png';
-import seniorHealth from '@/assets/images/senior_health.png';
+import orthopedicCare from '@/assets/images/orthopedic_care.webp';
+import manufacturingPills from '@/assets/images/manufacturing_pills.webp';
+import clinicalIv from '@/assets/images/clinical_nutrition_iv.webp';
+import gastroCare from '@/assets/images/gastro_care_new.webp';
+import cardiacCare from '@/assets/images/cardiac_care_new.webp';
+import seniorHealth from '@/assets/images/senior_health.webp';
 
 const categoryImages = {
   nutraceuticals: manufacturingPills,
@@ -72,6 +72,7 @@ const ProductCategories = () => {
                         src={categoryImages[category.id]} 
                         alt={category.name} 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                     </div>

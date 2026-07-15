@@ -179,16 +179,16 @@ export const TESTIMONIALS = [
   },
 ];
 
-import orthoPlusBottle from '@/assets/images/ortho-plus-bottle.png';
-import weightPlusBottle from '@/assets/images/weight-plus-bottle.png';
-import heyMomBottle from '@/assets/images/hey-mom-bottle.png';
+import orthoPlusBottle from '@/assets/images/ortho-plus-bottle.webp';
+import weightPlusBottle from '@/assets/images/weight-plus-bottle.webp';
+import heyMomBottle from '@/assets/images/hey-mom-bottle.webp';
 
 // New Product Images
-import heyMomTabletsImg from '@/assets/images/hey-mom-tablets.jpg';
-import slimProImg from '@/assets/images/slim-pro.jpg';
-import icuPlusImg from '@/assets/images/icu-plus.jpg';
-import glutathioneImg from '@/assets/images/glutathione-glow.jpg';
-import orthoPlusTabletsImg from '@/assets/images/ortho-plus-tablets.jpg';
+import heyMomTabletsImg from '@/assets/images/hey-mom-tablets.webp';
+import slimProImg from '@/assets/images/slim-pro.webp';
+import icuPlusImg from '@/assets/images/icu-plus.webp';
+import glutathioneImg from '@/assets/images/glutathione-glow.webp';
+import orthoPlusTabletsImg from '@/assets/images/ortho-plus-tablets.webp';
 
 export const FEATURED_PRODUCTS = [
   {

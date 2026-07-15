@@ -11,7 +11,7 @@ import SEO from '@/components/common/SEO';
 import SectionHeader from '@/components/common/SectionHeader';
 import { CORE_VALUES, COMPANY } from '@/constants';
 import { fadeInUp, staggerContainer, staggerItem } from '@/animations/variants';
-import facilityImage from '@/assets/images/modern_lab.png';
+import facilityImage from '@/assets/images/modern_lab.webp';
 
 const iconMap = {
   microscope: HiOutlineBeaker,
@@ -25,7 +25,12 @@ const iconMap = {
 const About = () => {
   return (
     <div className="pt-24 min-h-screen bg-light-bg">
-      <SEO title="About Us | Seravo Life Sciences" />
+      <SEO
+        title="About Us"
+        canonical="/about"
+        description="Learn about Seravo Life Sciences — our story, mission, core values, and commitment to advancing healthcare through evidence-based nutraceuticals and clinical nutrition since 2018."
+        keywords="about Seravo Life Sciences, pharmaceutical company India, nutraceutical manufacturer, WHO-GMP certified, clinical nutrition company Pune"
+      />
       
       {/* Header Section */}
       <div className="container-custom pt-8">
@@ -52,6 +57,7 @@ const About = () => {
                   src={facilityImage} 
                   alt="Seravo Life Sciences Facility" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </motion.div>

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HiOutlineMenuAlt3, HiX, HiPhone } from 'react-icons/hi';
 import { NAV_LINKS, COMPANY } from '@/constants';
 import Button from '@/components/common/Button';
-import logo from '@/assets/images/logo.png';
+import logo from '@/assets/images/logo.webp';
 import { slideInFromLeft } from '@/animations/variants';
 
 const Navbar = () => {

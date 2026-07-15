@@ -16,9 +16,9 @@ import {
   fadeInLeft,
   fadeInRight,
 } from '@/animations/variants';
-import microscopeLab from '@/assets/images/microscope-lab.png';
-import facilityImage from '@/assets/images/facility.png';
-import researchScientist from '@/assets/images/research_scientist.png';
+import microscopeLab from '@/assets/images/microscope-lab.webp';
+import facilityImage from '@/assets/images/facility.webp';
+import researchScientist from '@/assets/images/research_scientist.webp';
 
 const pillars = [
   {
@@ -92,7 +92,9 @@ const Research = () => {
     <div className="pt-20 min-h-screen bg-white">
       <SEO
         title="Research & Quality"
-        description="Discover Seravo Life Sciences' commitment to evidence-based medicine, innovative formulations, and world-class manufacturing standards."
+        canonical="/research"
+        description="Discover Seravo Life Sciences' evidence-based R&D, WHO-GMP certified manufacturing, and multi-stage quality control. ISO 9001:2015, FSSAI & NABL compliant."
+        keywords="pharmaceutical research India, WHO-GMP manufacturing, nutraceutical R&D, FSSAI certified, ISO 9001 pharma, clinical research Pune, GMP nutraceuticals"
       />
 
       {/* ── Hero Banner ── */}
@@ -167,6 +169,7 @@ const Research = () => {
                     src={researchScientist}
                     alt="Seravo Life Sciences Research"
                     className="w-full h-full object-cover"
+                    loading="eager"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent pointer-events-none" />
                 </div>
@@ -216,6 +219,7 @@ const Research = () => {
                   src={microscopeLab}
                   alt="High-tech Pharmaceutical Research"
                   className="w-full h-full object-cover mix-blend-lighten opacity-90 hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent pointer-events-none" />
                 <div className="absolute bottom-8 left-8 right-8">
@@ -408,6 +412,7 @@ const Research = () => {
                   src={facilityImage}
                   alt="Seravo Manufacturing Facility"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
               </div>

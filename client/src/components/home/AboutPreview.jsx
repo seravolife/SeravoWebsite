@@ -4,7 +4,7 @@ import { COMPANY } from '@/constants';
 import SectionHeader from '@/components/common/SectionHeader';
 import Button from '@/components/common/Button';
 import { fadeInLeft, staggerContainer, staggerItem } from '@/animations/variants';
-import facilityImage from '@/assets/images/facility.png';
+import facilityImage from '@/assets/images/facility.webp';
 
 
 
@@ -24,7 +24,7 @@ const AboutPreview = () => {
             <div className="relative rounded-3xl overflow-hidden border border-border">
               {/* Facility Image */}
               <div className="aspect-[4/3] bg-light-bg rounded-3xl overflow-hidden group">
-                <img src={facilityImage} alt="Seravo Manufacturing Facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                <img src={facilityImage} alt="Seravo Manufacturing Facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" />
               </div>
 
               {/* Quality badge */}
